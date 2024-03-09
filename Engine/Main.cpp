@@ -30,7 +30,7 @@ int WINAPI wWinMain( HINSTANCE hInst,HINSTANCE,LPWSTR pArgs,INT )
 		try
 		{
 			Game theGame( wnd );
-			while( wnd.ProcessMessage() )
+			while( wnd.ProcessMessage() && !wnd.kbd.KeyIsPressed(VK_ESCAPE))
 			{
 				theGame.Go();
 			}
